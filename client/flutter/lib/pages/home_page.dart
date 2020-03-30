@@ -71,6 +71,7 @@ class _HomePageState extends State<HomePage> {
                   S.of(context).homePagePageButtonLatestNumbers,
                   _launchStatsDashboard,
                   mainAxisAlignment: MainAxisAlignment.start,
+                  isExternalLink: true,
                 ),
                 PageButton(
                   Color(0xff3DA7D4),
@@ -140,7 +141,15 @@ class _HomePageState extends State<HomePage> {
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: <Widget>[
-                        Text("Donate here"),
+                        Row(
+                          children: <Widget>[
+                            Icon(Icons.link),
+                            Padding(
+                              padding: EdgeInsets.only(right: 10),
+                            ),
+                            Text("Donate here"),
+                          ],
+                        ),
                         Icon(Icons.arrow_forward_ios)
                       ],
                     ),

@@ -11,6 +11,7 @@ class PageButton extends StatelessWidget {
   final CrossAxisAlignment crossAxisAlignment;
   final MainAxisAlignment mainAxisAlignment;
   final TextStyle titleStyle;
+  final bool isExternalLink;
 
   final double verticalPadding;
   final double horizontalPadding;
@@ -20,6 +21,7 @@ class PageButton extends StatelessWidget {
     this.backgroundColor,
     this.title,
     this.onPressed, {
+    this.isExternalLink = false,
     this.description = "",
     this.borderRadius = 25.0,
     this.verticalPadding = 15.0,
@@ -43,6 +45,7 @@ class PageButton extends StatelessWidget {
             crossAxisAlignment: this.crossAxisAlignment,
             mainAxisAlignment: this.mainAxisAlignment,
             children: <Widget>[
+              if (this.isExternalLink) Icon(Icons.link),
               Text(
                 this.title,
                 textScaleFactor: 1.0 + 0.6 * contentScale(context),

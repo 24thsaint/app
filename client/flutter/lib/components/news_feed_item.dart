@@ -45,11 +45,14 @@ class NewsFeedItem extends StatelessWidget {
                   width: 10,
                 ),
                 Flexible(
-                    child: Text(
-                  this.description,
-                  style: TextStyle(fontSize: 18),
-                )),
-                Center(child: Icon(Icons.arrow_forward_ios)),
+                    child: Padding(
+                      padding: EdgeInsets.only(right: 16),
+                      child: Text(
+                        this.description,
+                        style: TextStyle(fontSize: 18),
+                      ),
+                    )),
+                Center(child: Icon(Icons.link)),
               ],
             ),
             Divider()
